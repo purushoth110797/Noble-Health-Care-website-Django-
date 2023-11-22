@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Purushothaman" />
+    <meta
+      name="description"
+      content="This is the appointment form for Noble Health Care to collect the data of persom who apply for appointment. To maintain the applicant detail and approve them appropriately."
+    />
+    <title>Appointment Form</title>
+    <!-- Linking the bootstrap css and js -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Linking the external CSS file -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/edit_form.css' %}"
+      type="text/css"
+    />
+    <!-- Linking the external JS file -->
+    <!--    <script defer src="./js/appointment.js"></script>-->
+    <!-- linking the logo to our page  title-->
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/logo1.png' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="form-bg-container">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h1 class="form-heading">Appointment Booking form</h1>
+          </div>
+          <div>
+            <p class="form-description">
+              The appointment form on our hospital website simplifies the
+              scheduling process, giving you the convenience of choosing your
+              preferred date and time for medical appointments. It reduces wait
+              times, streamlines resources, and enhances privacy and data
+              security. We're committed to providing efficient, patient-centered
+              care
+            </p>
+          </div>
+          <div class="form-container">
+            <form id="myForm" action="/appointment/userDetailUpdate/{{ userData.id }}/" method="post">
+              {% csrf_token %}
+              <fieldset>
+                <legend> Update Personal and Appointment Info</legend>
+                <div class="container">
+                  <div class="row">
+                    <!-- First name -->
+                    <div class="col-12 col-lg-4">
+                      <!-- Label -->
+                      <label class="form-label" for="firstName"
+                        >First Name</label
+                      >
+                      <!-- input -->
+                      <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        placeholder="Enter your First Name"
+                        autocomplete="on"
+                        required value="{{ userData.firstName }}"
+                      />
+                    </div>
+                    <!-- Middle name -->
+                    <div class="col-12 col-lg-4">
+                      <!-- Label -->
+                      <label class="form-label" for="middleName"
+                        >Middle Name</label
+                      >
+                      <!-- input -->
+                      <input
+                        type="text"
+                        name="middleName"
+                        id="middleName"
+                        placeholder="Enter your middle Name"
+                        autocomplete="on" value="{{ userData.middleName }}"
+                      />
+                    </div>
+                    <!-- last name -->
+                    <div class="col-12 col-lg-4">
+                      <!-- Label -->
+                      <label class="form-label" for="lastName">Last Name</label>
+                      <!-- input -->
+                      <input
+                        type="text"
+                        name="lastName"
+                        id="lastName"
+                        placeholder="Enter your last Name"
+                        autocomplete="on"
+                        required value="{{ userData.lastName }}"
+                      />
+                    </div>
+                    <!-- Gender -->
+                    <!-- male -->
+                    <div class="col-12">
+                      <h1 class="gender-field-heading">Gender</h1>
+                      <!-- male input -->
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="maleGender"
+                        value="male" {% if userData.gender == 'male' %}checked{% endif %}
+                      />
+                      <!-- label for male -->
+                      <label class="form-label" for="maleGender">Male</label>
+                      <!-- Female input-->
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="femaleGender"
+                        value="female" {% if userData.gender == 'female' %}checked{% endif %}
+                      />
+                      <!-- label for female -->
+                      <label class="form-label" for="femaleGender"
+                        >Female</label
+                      >
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12">
+                      <!-- label -->
+                      <label class="form-label" for="email">Email ID</label>
+                      <!-- input -->
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        autocomplete="on"
+                        required
+                        placeholder="Enter your Email ID" value="{{ userData.email }}"
+                      />
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="col-12">
+                      <!-- Label -->
+                      <label class="form-label" for="phoneNumber"
+                        >Phone Number</label
+                      >
+                      <!-- input -->
+                      <input
+                        type="tel"
+                        name="phoneNumber"
+                        id="phoneNumber"
+                        placeholder="Enter your phoneNumber" value="{{ userData.phoneNumber }}"
+                      />
+                    </div>
+                    <!-- Dropdown for selecting the departments -->
+                    <!-- Select for drop down menu -->
+                    <div class="col-12">
+                      <!-- label -->
+                      <label class="form-label" for="department"
+                        >Department</label
+                      >
+                      <!-- department dropdown -->
+                      <select
+                        name="department"
+                        id="department"
+                        class="dept-dropdown"
+                        required
+                      >
+                        <option {% if userData.department == 'Cardiology' %}checked{% endif %} value="Cardiology">Cardiology</option>
+                        <option {% if userData.department == 'Dermatology' %}checked{% endif %} value="Dermatology">Dermatology</option>
+                        <option {% if userData.department == 'Endocrinology' %}checked{% endif %} value="Endocrinology">Endocrinology</option>
+                        <option {% if userData.department == 'Infectious Disease' %}checked{% endif %} value="Infectious Disease">
+                          Infectious Disease
+                        </option>
+                        <option {% if userData.department == 'Neurology' %}checked{% endif %} value="Neurology">Neurology</option>
+                        <option {% if userData.department == 'Orthopedics' %}checked{% endif %} value="Orthopedics">Orthopedics</option>
+                        <option {% if userData.department == 'Pediatrics' %}checked{% endif %} value="Pediatrics">Pediatrics</option>
+                        <option {% if userData.department == 'Gastroenterology' %}checked{% endif %} value="Gastroenterology">
+                          Gastroenterology
+                        </option>
+                        <option {% if userData.department == 'Nephrology' %}checked{% endif %} value="Nephrology">Nephrology</option>
+                        <option {% if userData.department == 'Psychiatry' %}checked{% endif %} value="Psychiatry">Psychiatry</option>
+                        <option {% if userData.department == 'Pulmonology' %}checked{% endif %} value="Pulmonology">Pulmonology</option>
+                        <option {% if userData.department == 'Radiology' %}checked{% endif %} value="Radiology">Radiology</option>
+                        <option {% if userData.department == 'Rheumatology' %}checked{% endif %} value="Rheumatology">Rheumatology</option>
+                        <option {% if userData.department == 'Others' %}checked{% endif %} value="Others">Others</option>
+                      </select>
+                    </div>
+                    <!-- Preferred Date -->
+                    <div class="col-12">
+                      <!-- date -->
+                      <!-- label -->
+                      <label class="form-label" for="date"
+                        >Date of Appointment</label
+                      >
+                      <!-- Convert the string to a date object -->
+                      {% with formatted_date=userData.preferredDate|date:"M. d, Y" %}
+                      <!-- input -->
+                      <input
+                        type="date"
+                        name="preferredDate"
+                        id="date"
+                        required {% if formatted_date %}value="{{ formatted_date }}"{% endif %}
+                      />
+                      {% endwith %}
+                    </div>
+                    <!-- preferred time -->
+                    <div class="container">
+                      <div class="row">
+                        <label class="form-label col-12"
+                          >Preferred timing</label
+                        >
+                        <!-- Morning -->
+                        <div class="col-12 col-md-4">
+                          <input
+                            type="checkbox"
+                            name="preferredTime"
+                            id="morning"
+                            value="Morning" {% if 'Morning' in userData.preferredTime %}checked{% endif %}
+                          />
+                          <label class="form-label" for="morning"
+                            >Morning</label
+                          >
+                        </div>
+                        <!-- Afternoon -->
+                        <div class="col-12 col-md-4">
+                          <input
+                            type="checkbox"
+                            name="preferredTime"
+                            id="Afternoon"
+                            value="Afternoon" {% if 'Afternoon' in userData.preferredTime %}checked{% endif %}
+                          />
+                          <label class="form-label" for="Afternoon"
+                            >Afternoon</label
+                          >
+                        </div>
+                        <!-- Evening -->
+                        <div class="col-12 col-md-4">
+                          <input
+                            type="checkbox"
+                            name="preferredTime"
+                            id="evening"
+                            value="Evening" {% if 'Evening' in userData.preferredTime %}checked{% endif %}
+                          />
+                          <label class="form-label" for="evening"
+                            >Evening</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Medical concern -->
+                    <div class="col-12">
+                      <!-- Label -->
+                      <label class="form-label" for="medicalConcern"
+                        >Medical Concern</label
+                      >
+                      <!-- input -->
+                      <input
+                        type="text"
+                        name="medicalConcern"
+                        id="medicalConcern" value="{{ userData.medicalConcern }}"
+                      />
+                    </div>
+                    <!-- Address -->
+                    <div class="col-12">
+                      <!-- Label -->
+                      <label class="form-label" for="address">Address</label>
+                      <!-- input -->
+                      <input type="text" name="address" id="address" value="{{ userData.address }}" />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <!-- Submit button -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary submitButton">
+                  Submit Application
+                </button>
+              </div>
+              <!-- Submit button -->
+              <div class="text-center pt-4">
+                <button class="btn">
+                  <a href="/Home/" class="HomeBtn">Home</a>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

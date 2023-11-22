@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Purushothaman" />
+    <meta
+      name="description"
+      content="Welcome to Noble Health Care, a leading healthcare institution dedicated to providing comprehensive medical services. Our experienced team of healthcare professionals is committed to delivering high-quality care and treatment. Explore our services, facilities, and patient resources for your health and well-being."
+    />
+    <title>Noble Health Care</title>
+    <!-- Linking the bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <!-- Linking the JS file -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- favicon for the website -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/logo1.png' %}"
+      type="image/x-icon"
+    />
+    <!-- Linking the bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!--Font awesome script-->
+    <script
+      src="https://kit.fontawesome.com/7fb2d80710.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="{% static 'image/logo1.png' %}"
+              alt="Hospotal logo"
+              width="200"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" id="navbar-nav">
+              <!--About -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item1"
+                >
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/overview/"
+                      >Overview</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/Home/vision_mission/"
+                      >Vision & Mission</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/awards/"
+                      >Milestones</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/gallery/"
+                      >Gallery</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/careers/"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Doctors -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item2"
+                >
+                  Doctors
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctors/"
+                      >Doctors</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctor_profile/"
+                      >Doctors Profile</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/search_doctors/"
+                      >Search Doctor</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctors_availability/"
+                      >Doctors availability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Appointment -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item5"
+                >
+                  Appointment
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/booking_form/"
+                      >Booking form</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/booking_status/"
+                      >Booking Status</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/appointment/edit/"
+                      >Edit</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/cancel/"
+                      >cancel</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/history/"
+                      >History</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Medical services -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item6"
+                >
+                  Medical Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/list/"
+                      >List</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/details/"
+                      >Details</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/pricing_info/"
+                      >Pricing and Insurance Info</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Banner section -->
+      <!-- Banner section back ground image container -->
+      <div
+        class="banner-section-image-container d-flex flex-column justify-content-end align-items-end"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 banner-container text-center">
+              <!-- Banner Heading -->
+              <h1 class="banner-heading">Your Health, Our Priority.</h1>
+              <!-- Banner description -->
+              <p class="banner-description">
+                At The Noble Health Care, we are dedicated to putting your
+                health and well-being first. Our experienced team of healthcare
+                professionals is committed to providing comprehensive and
+                compassionate medical services, tailored to your unique needs.
+                We understand that your health is a top priority, and it's our
+                mission to ensure you receive the highest quality care and
+                support on your journey to wellness. Discover our range of
+                services, state-of-the-art facilities, and patient-centered
+                resources, all designed to empower you on the path to a
+                healthier and happier life. Your health is not just our duty;
+                it's our passion!
+              </p>
+              <!-- Adding the Book Appointment button -->
+              <a href="/Home/booking_form/">
+                <button
+                  class="book-appointment-btn btn btn-primary"
+                  id="bookAppointmentBtn"
+                >
+                  Book Appointment
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!--card for services-->
+      <div class="card-containers pt-5 pb-5" id="homeCard">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Book appointment card -->
+            <div class="col-12 col-lg-4 home-card shadow-lg text-center">
+              <div>
+                <img
+                  src="{% static 'image/home icons/book_appointment.png' %}"
+                  alt="Book Appointment icons"
+                  class="home-card-icon pt-3 pb-3"
+                />
+              </div>
+              <h5>
+                <a href="#" target="_blank" class="home-card-title"
+                  >Book Appointment</a
+                >
+              </h5>
+            </div>
+            <!-- Booking health checkup card-->
+            <div class="col-12 col-lg-4 home-card shadow-lg text-center">
+              <div>
+                <img
+                  src="{% static 'image/home icons/book_health_checkup.png' %}"
+                  alt="Book checkup icons"
+                  class="home-card-icon pt-3 pb-3"
+                />
+              </div>
+              <h5>
+                <a href="#" target="_blank" class="home-card-title"
+                  >Book Checkup</a
+                >
+              </h5>
+            </div>
+            <!-- Consult online card-->
+            <div class="col-12 col-lg-4 home-card shadow-lg text-center">
+              <div>
+                <img
+                  src="{% static 'image/home icons/consult_online.png' %}"
+                  alt="Consult Online Icon"
+                  class="home-card-icon pt-3 pb-3"
+                />
+              </div>
+              <h5>
+                <a href="#" target="_blank" class="home-card-title"
+                  >Consult Online</a
+                >
+              </h5>
+            </div>
+            <!-- Buy medicine card-->
+            <div class="col-12 col-lg-4 home-card shadow-lg text-center">
+              <div>
+                <img
+                  src="{% static 'image/home icons/buy_medicine.png' %}"
+                  alt="Buy medicine Icon"
+                  class="home-card-icon pt-3 pb-3"
+                />
+              </div>
+              <h5>
+                <a href="#" target="_blank" class="home-card-title"
+                  >Buy Medicine</a
+                >
+              </h5>
+            </div>
+            <!-- Find nearest service card-->
+            <div class="col-12 col-lg-4 home-card shadow-lg text-center">
+              <div>
+                <img
+                  src="{% static 'image/home icons/find_nearest_service.png' %}"
+                  alt="Find Nearest Service Icon"
+                  class="home-card-icon pt-3 pb-3"
+                />
+              </div>
+              <h5>
+                <a href="#" target="_blank" class="home-card-title"
+                  >Find Nearest Service</a
+                >
+              </h5>
+            </div>
+            <!-- View dactor card-->
+            <div class="col-12 col-lg-4 home-card shadow-lg text-center">
+              <div>
+                <img
+                  src="{% static 'image/home icons/view_doctors.png' %}"
+                  alt="View doctors Icon"
+                  class="home-card-icon pt-3 pb-3"
+                />
+              </div>
+              <h5>
+                <a href="#" target="_blank" class="home-card-title"
+                  >View Doctors</a
+                >
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- About Us section -->
+      <div class="about-section pt-5 pb-5">
+        <div class="container">
+          <div
+            class="row d-flex flex-nowrap justify-content-between align-items-center"
+          >
+            <div
+              class="col-12 col-lg-7 d-flex flex-column justify-content-center"
+            >
+              <!-- heading -->
+              <h1 class="about-us-section-heading">About Us!</h1>
+              <!-- subheading -->
+              <h3 class="about-us-section-sub-heading">
+                Committed to Your Health and Well-Being
+              </h3>
+              <!-- Description -->
+              <p class="about-us-section-description">
+                At Noble Health Care, we stand at the forefront of compassionate
+                healthcare. With a legacy of excellence, we are dedicated to
+                providing unwavering support on your journey to optimal health.
+                Our state-of-the-art facilities, coupled with a team of skilled
+                and caring professionals, ensure that you receive the highest
+                standard of medical care. We believe in a patient-centric
+                approach, tailoring our services to meet your individual needs.
+                From the moment you step through our doors, you'll experience a
+                warm and welcoming environment designed to foster healing and
+                trust. Our commitment extends beyond medical expertise; it
+                encompasses a genuine dedication to your well-being. What sets
+                us apart is the harmonious blend of cutting-edge medical
+                technologies and a compassionate healthcare team. We understand
+                that each individual's path to recovery is unique, and our goal
+                is to make your experience with us one of comfort, trust, and
+                ultimately, healing. Choose Noble Health Care for a holistic
+                approach to wellness that begins with genuine care and concludes
+                with your optimal health. We invite you to explore our services,
+                facilities, and the values that drive us. Welcome to a place
+                where health meets heart.
+              </p>
+              <div class="d-lg-none small-slider">
+                <!-- Responsive slider -->
+                <div class="small-slider">
+                  <div class="slider">
+                    <img
+                      src="{% static 'image/home_slider/img1.jpg' %}"
+                      alt="Hospital Image 1"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img2.jpg' %}"
+                      alt="Hospital Image 2"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img3.jpg' %}"
+                      alt="Hospital Image 3"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img4.jpg' %}"
+                      alt="Hospital Image 4"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img5.jpg' %}"
+                      alt="Hospital Image 5"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img6.jpg' %}"
+                      alt="Hospital Image 6"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img7.jpg' %}"
+                      alt="Hospital Image 7"
+                    />
+                    <img
+                      src="{% static 'image/home_slider/img8.jpg' %}"
+                      alt="Hospital Image 8"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- image for medium size image -->
+            <div class="col-12 col-lg-5 d-none d-lg-block p-3">
+              <!-- Responsive slider -->
+              <div class="slider-container">
+                <div class="slider">
+                  <img
+                    src="{% static 'image/home_slider/img1.jpg' %}"
+                    alt="Hospital Image 1"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img2.jpg' %}"
+                    alt="Hospital Image 2"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img3.jpg' %}"
+                    alt="Hospital Image 3"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img4.jpg' %}"
+                    alt="Hospital Image 4"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img5.jpg' %}"
+                    alt="Hospital Image 5"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img6.jpg' %}"
+                    alt="Hospital Image 6"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img7.jpg' %}"
+                    alt="Hospital Image 7"
+                  />
+                  <img
+                    src="{% static 'image/home_slider/img8.jpg' %}"
+                    alt="Hospital Image 8"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- why choose us section -->
+      <div class="why-choose-us-section pt-5 pb-5">
+        <div class="container">
+          <div
+            class="row d-flex flex-nowrap justify-content-between align-items-center"
+          >
+            <div
+              class="col-12 col-md-7 d-flex flex-column justify-content-center"
+            >
+              <!-- heading -->
+              <h1 class="why-choose-us-section-heading">Why Choose Us!</h1>
+              <!-- subheading -->
+              <h3 class="why-choose-us-section-sub-heading">
+                Healing starts here
+              </h3>
+              <!-- Description -->
+              <p class="why-choose-us-section-description">
+                At Noble Health Care, we are committed to being your partner in
+                health and well-being. Our dedication to providing exceptional
+                care goes beyond medical expertise. it's about creating an
+                environment where healing begins the moment you walk through our
+                doors. What sets us apart is a harmonious blend of cutting-edge
+                medical technologies, a compassionate and skilled team of
+                healthcare professionals, and a patient-centric approach. We
+                understand that every individual's journey to recovery is
+                unique, and that's why we tailor our services to meet your
+                specific needs. From the warm welcome at reception to the
+                advanced treatments in our state-of-the-art facilities, we
+                strive to make your experience with us one of comfort, trust,
+                and ultimately, healing. Choose Noble Health Care for a path to
+                wellness that starts with genuine care and ends with your
+                optimal health.
+              </p>
+              <div class="d-md-none">
+                <img
+                  src="{% static 'image/WCU_image.jpeg' %}"
+                  alt="Why Choose us section image"
+                  loading="lazy"
+                  class="small-wcu-image"
+                />
+              </div>
+            </div>
+            <!-- image for medium size image -->
+            <div class="col-12 col-md-5 d-none d-md-block p-3">
+              <img
+                src="{% static 'image/WCU_image.jpeg' %}"
+                alt="Why Choose us section image"
+                id="medium-wcu-image"
+                loading="lazy"
+                width="400"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Location section -->
+      <div class="location-main-container pt-5 pb-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-lg-4 location-card-container shadow-lg">
+              <!-- heading -->
+              <h1 class="location-main-heading">Locations</h1>
+              <!-- description -->
+              <p class="location-main-description">
+                Enjoy the tranquility of our surroundings as we are situated in
+                a picturesque area, providing a peaceful and healing
+                environment. Serving as a central hub for healthcare, our
+                location ensures that you have swift access to top-notch medical
+                services and specialists.
+              </p>
+              <!-- link to the main location page -->
+              <a href="/">
+                <!-- icon -->
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <!-- text -->
+                <p class="location-link-text">Explore all locations &gt;</p>
+              </a>
+            </div>
+            <!-- image location card 1 -->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos1.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 1"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Chennai (Kolathur)</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    This is a wider card with Welcome to our flagship hospital
+                    in Chennai, where cutting-edge medical technology meets
+                    compassionate care. Our expert team of healthcare
+                    professionals is dedicated to providing personalized and
+                    top-notch medical services to the community.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 2-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos2.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 2"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Chennai (Adayar)</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    Nestled in the heart of Chennai serene suburbs, our hospital
+                    is a beacon of health and wellness. With a focus on
+                    family-centric care, we offer a tranquil environment where
+                    patients receive expert medical attention in a comforting
+                    atmosphere.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 3-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos3.png' %}"
+                  class="card-img"
+                  alt="Hospital image 3"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Chennai (Tambaram)</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    Experience healthcare with a view at our lake side Branch in
+                    Chennai. Overlooking the picturesque lake, our hospital
+                    combines state-of-the-art facilities with a healing touch.
+                    Our commitment to your well-being extends beyond treatment,
+                    embracing the therapeutic power of nature.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 4-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos4.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 4"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Tiruchirappalli (Ponmalai)</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    In the bustling Tech Hub of Tiruchirappalli, our hospital
+                    stands as a healthcare oasis. Embracing innovation, we
+                    leverage cutting-edge technologies to deliver precise and
+                    efficient medical solutions. Your health journey begins here
+                    at the intersection of technology and compassion.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 5-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos5.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 5"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Tiruchirappalli (Srirangam)</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    Our Community Care Hospital in Srirangam is more than a
+                    hospital; it's a health hub for the entire neighborhood.
+                    Focused on preventive care and community outreach, we strive
+                    to enhance the well-being of residents through education,
+                    wellness programs, and accessible healthcare services.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 6-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos6.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 6"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Salem</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    At the Mountain View Medical Center in Salem, we provide
+                    healthcare at new heights. Surrounded by scenic mountains,
+                    our facility combines a peaceful setting with
+                    state-of-the-art medical services, ensuring a comprehensive
+                    approach to your health.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 7-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos7.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 7"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Coimbatore</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    Step into the future of healthcare at our Innovative Health
+                    Pavilion in Coimbatore. With a focus on research and
+                    pioneering medical advancements, we aim to redefine the
+                    standards of healthcare delivery, ensuring that our patients
+                    receive the best in medical innovation and compassionate
+                    care.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- image location card 8-->
+            <div class="col-12 col-lg-4 image-card-container">
+              <div class="card text-bg-dark position-relative">
+                <img
+                  src="{% static 'image/hospital_image/hos8.jpeg' %}"
+                  class="card-img"
+                  alt="Hospital image 8"
+                />
+                <div
+                  class="card-overlay position-absolute top-0 start-0 w-100 h-100"
+                  style="background: rgba(0, 0, 0, 0.5)"
+                ></div>
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end align-content-end position-absolute top-0 start-0 w-100 h-100"
+                >
+                  <h5 class="card-title">
+                    <a
+                      href="#"
+                      class="card-link"
+                      id="image-card-title"
+                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8)"
+                      >NHC Madurai</a
+                    >
+                  </h5>
+                  <p
+                    class="card-text text-light location-description"
+                    style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7)"
+                  >
+                    Located in the heart of the city, our Urban Health Hub in
+                    Madurai is a dynamic center for comprehensive medical care.
+                    With a focus on accessibility and efficiency, we cater to
+                    the diverse healthcare needs of our urban community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer section -->
+      <div class="footer-section pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!-- Hospital Logos -->
+              <div class="text-center">
+                <img
+                  src="{% static 'image/logo1.png' %}"
+                  alt="logo of the Hospital"
+                  class="footer-section-logo pt-4"
+                />
+              </div>
+
+              <!-- Mail id -->
+              <div class="text-center mt-3">
+                <a
+                  href="mailto:npurush11@gmail.com"
+                  class="footer-section-mail-id"
+                  >npurush11@gmail.com</a
+                >
+              </div>
+
+              <!-- Address -->
+              <div class="text-center mt-3">
+                <address class="footer-section-address">
+                  No:93, Ambedkar nagar, 1<sup>st</sup> street, kolathur,
+                  chennai <span class="nowrap"></span>-600099.
+                </address>
+              </div>
+              <!-- copy rights -->
+              <div class="copyRightsCont">
+                <p>&copy; 2023 Noble Health Care. All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

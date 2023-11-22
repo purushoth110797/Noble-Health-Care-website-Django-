@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHC signin page</title>
+    <!-- linking the external css file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
+
+</head>
+<body>
+    <section class="form-container">
+        <h2 class="signin-heading">Sign In</h2>
+        <div class="signin-form-container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <p class="signin-text">Don't have an account? <a href="{% url 'signup' %}" class="signup-link">Sign Up</a></p>
+    </section> 
+</body>
+</html>

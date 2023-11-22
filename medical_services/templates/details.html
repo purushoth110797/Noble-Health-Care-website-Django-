@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Purushothaman" />
+    <meta
+      name="description"
+      content="Welcome to Noble Health Care, a leading healthcare institution dedicated to providing comprehensive medical services. Our experienced team of healthcare professionals is committed to delivering high-quality care and treatment. Explore our services, facilities, and patient resources for your health and well-being."
+    />
+    <title>Noble Health Care</title>
+    <!-- Linking the bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/details.css' %}" />
+    <!-- favicon for the website -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/logo1.png' %}"
+      type="image/x-icon"
+    />
+    <!-- Linking the bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!--Font awesome script-->
+    <script
+      src="https://kit.fontawesome.com/7fb2d80710.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="{% static 'image/logo1.png' %}"
+              alt="Hospotal logo"
+              width="200"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" id="navbar-nav">
+              <!-- Home -->
+              <li class="nav-item">
+                <a class="nav-link" id="nav-item1" href="/Home/">Home</a>
+              </li>
+              <!--About -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item2"
+                >
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/overview/"
+                      >Overview</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/Home/vision_mission/"
+                      >Vision & Mission</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/awards/"
+                      >Milestones</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/gallery/"
+                      >Gallery</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/careers/"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Doctors -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item3"
+                >
+                  Doctors
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctors/"
+                      >Doctors</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctor_profile/"
+                      >Doctors Profile</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/search_doctors/"
+                      >Search Doctor</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctors_availability/"
+                      >Doctors availability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Appointment -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item6"
+                >
+                  Appointment
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/booking_form/"
+                      >Booking form</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/booking_status/"
+                      >Booking Status</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/appointment/edit/"
+                      >Edit</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/cancel/"
+                      >cancel</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/history/"
+                      >History</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Medical services -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item7"
+                >
+                  Medical Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/list/"
+                      >List</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/details/"
+                      >Details</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/pricing_info/"
+                      >Pricing and Insurance Info</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="milestone-main-container">
+        <div class="milestone-container-heading">
+          <h1 class="milestone-main-heading">Our Medical Services</h1>
+          <!-- Primary Care -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Primary Care</h1>
+                  <p class="milestone-description">
+                    Primary care is the foundation of a healthcare system,
+                    offering essential and continuous medical services to
+                    individuals across their lifespan. At Noble Health Care, our
+                    primary care services are designed to be the first line of
+                    defense for your health. Our team of experienced primary
+                    care physicians and healthcare professionals is dedicated to
+                    providing comprehensive and personalized care, focusing on
+                    prevention, early intervention, and the management of common
+                    health issues. One of the key aspects of our primary care
+                    services is preventive healthcare. We believe in the power
+                    of proactive measures to keep you healthy, offering regular
+                    check-ups, screenings, and vaccinations. These preventive
+                    efforts are crucial for identifying potential health risks
+                    early on and promoting overall well-being. In addition to
+                    preventive care, our primary care team is equipped to handle
+                    a wide range of health concerns. From managing chronic
+                    conditions to addressing acute illnesses, we are committed
+                    to providing thorough assessments, personalized treatment
+                    plans, and ongoing support. Our goal is to empower you with
+                    the knowledge and resources needed to make informed
+                    decisions about your health. Furthermore, at Noble Health
+                    Care, we understand the importance of continuity in
+                    healthcare. Building lasting relationships with our patients
+                    is at the core of our primary care approach. We aim to be
+                    your trusted healthcare partner, offering prompt and
+                    accessible care when you need it and coordinating seamlessly
+                    with specialists to ensure integrated and holistic
+                    healthcare experiences. Your health journey begins with
+                    primary care, and we are here to guide you every step of the
+                    way.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Specialty Care -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Specialty Care</h1>
+                  <p class="milestone-description">
+                    Specialty care at Noble Health Care represents an elevated
+                    level of expertise and focus on specific medical
+                    disciplines, ensuring that patients receive specialized and
+                    advanced care tailored to their unique health needs. Our
+                    team of skilled specialists, including board-certified
+                    physicians and healthcare professionals, is dedicated to
+                    delivering cutting-edge treatments and interventions within
+                    their respective fields. In our commitment to excellence, we
+                    offer a diverse range of specialty care services, covering
+                    areas such as cardiology, gastroenterology, orthopedics,
+                    neurology, and more. Each specialty is led by experts who
+                    have undergone rigorous training and possess extensive
+                    experience in their chosen fields. This allows us to provide
+                    a depth of knowledge and skill that goes beyond general
+                    medical practice, ensuring that our patients receive the
+                    highest standard of care for their specific conditions. Our
+                    specialty care services extend beyond diagnosis and
+                    treatment; we emphasize patient education, involving you in
+                    the decision-making process and providing detailed
+                    information about your condition and available treatment
+                    options. We understand that navigating a specialized medical
+                    journey can be complex, and our team is dedicated to
+                    offering compassionate support and guidance every step of
+                    the way. Collaboration is a cornerstone of our specialty
+                    care approach. Our specialists work closely with primary
+                    care physicians and other healthcare providers to ensure a
+                    seamless and integrated healthcare experience. This
+                    collaborative effort guarantees that patients receive
+                    comprehensive care that addresses both their specific
+                    medical concerns and overall well-being. At Noble Health
+                    Care, we take pride in our commitment to excellence in
+                    specialty care, combining state-of-the-art technology with a
+                    patient-centered approach to deliver exceptional and
+                    personalized healthcare experiences. Your health is our
+                    priority, and our specialized services are designed to meet
+                    the unique needs of each individual we serve.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Emergency Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Emergency Services</h1>
+                  <p class="milestone-description">
+                    Emergency services at Noble Health Care are geared towards
+                    providing rapid and life-saving medical care to individuals
+                    facing critical and urgent health situations. Our dedicated
+                    emergency department operates 24/7, staffed by a team of
+                    highly trained physicians, nurses, and support staff who are
+                    equipped to handle a wide range of medical emergencies with
+                    efficiency and compassion. From acute injuries and sudden
+                    illnesses to severe trauma, our emergency services are
+                    designed to deliver prompt and expert care when time is of
+                    the essence. Our facility is equipped with state-of-the-art
+                    technology and resources to facilitate swift and accurate
+                    diagnoses, allowing our medical team to initiate appropriate
+                    and timely interventions. Our commitment to excellence in
+                    emergency care extends beyond the immediate treatment of
+                    medical conditions. We prioritize a patient-centered
+                    approach, ensuring that individuals and their families
+                    receive clear communication about the diagnosis, treatment
+                    plan, and expected outcomes. Our goal is to alleviate
+                    anxiety and provide support during moments of crisis. In
+                    addition to our skilled medical professionals, our emergency
+                    services are bolstered by strong collaborations with other
+                    hospital departments and local emergency response teams.
+                    This integrated approach allows for seamless transitions in
+                    patient care, ensuring that individuals receive continuous
+                    and comprehensive attention as they move through the
+                    emergency care process. At Noble Health Care, we recognize
+                    that emergencies can be overwhelming, and our dedicated team
+                    is here to provide not only medical expertise but also
+                    empathy and understanding. Whether facing a sudden illness,
+                    injury, or any other urgent medical concern, you can trust
+                    us to deliver swift and compassionate emergency services,
+                    prioritizing your health and well-being.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Diagnostic Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Diagnostic Services</h1>
+                  <p class="milestone-description">
+                    Our diagnostic services at Noble Health Care are designed to
+                    provide accurate and comprehensive insights into the health
+                    of our patients. With state-of-the-art technology and a team
+                    of skilled professionals, we offer a wide range of
+                    diagnostic procedures to assist in identifying and
+                    understanding various medical conditions. Our commitment to
+                    precision and efficiency ensures that patients receive
+                    prompt and reliable results, facilitating timely and
+                    targeted medical interventions. Our diagnostic imaging
+                    services encompass advanced modalities such as X-rays, CT
+                    scans, MRI, and ultrasound, allowing us to visualize
+                    internal structures and detect abnormalities with
+                    exceptional clarity. These non-invasive techniques aid in
+                    the diagnosis of conditions affecting bones, organs, and
+                    soft tissues, guiding physicians in formulating personalized
+                    treatment plans. Laboratory services play a crucial role in
+                    our diagnostic repertoire, enabling the analysis of blood,
+                    urine, and other bodily fluids. Our fully equipped
+                    laboratory employs cutting-edge technologies to conduct a
+                    diverse array of tests, including routine blood work,
+                    genetic testing, and specialized assays. The rapid
+                    turnaround of results ensures that healthcare providers can
+                    make informed decisions promptly. At Noble Health Care, we
+                    prioritize patient comfort and understanding throughout the
+                    diagnostic process. Our compassionate and highly trained
+                    staff work to minimize anxiety and provide clear
+                    communication about each procedure. We recognize the
+                    importance of diagnostics in guiding therapeutic strategies,
+                    and our commitment to accuracy underscores our dedication to
+                    delivering quality healthcare services. By offering a
+                    comprehensive suite of diagnostic services under one roof,
+                    we aim to streamline the healthcare journey for our
+                    patients, providing them with the information needed for
+                    effective medical decision-making. Whether for routine
+                    screenings or complex diagnostic evaluations, individuals
+                    can trust our facility to deliver precise and reliable
+                    diagnostic services with a focus on promoting overall health
+                    and well-being.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Surgical Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Surgical Services</h1>
+                  <p class="milestone-description">
+                    At Noble Health Care, our surgical services are dedicated to
+                    providing cutting-edge and compassionate care to meet the
+                    diverse needs of our patients. We boast a team of highly
+                    skilled surgeons and medical professionals committed to
+                    delivering safe and effective surgical interventions across
+                    various specialties. Our state-of-the-art surgical
+                    facilities are equipped with the latest technologies,
+                    ensuring that patients receive the highest standard of care
+                    throughout their surgical experience. From routine
+                    procedures to complex surgeries, our surgical team
+                    collaborates seamlessly to tailor treatment plans to each
+                    patient's unique medical condition. Our commitment to safety
+                    is paramount, and we adhere to rigorous protocols to
+                    minimize risks and optimize outcomes. Preoperative
+                    assessments, thorough consultations, and comprehensive
+                    postoperative care contribute to a holistic and
+                    patient-centered surgical journey. We offer a wide range of
+                    surgical specialties, including orthopedic surgery, general
+                    surgery, neurosurgery, cardiovascular surgery, and more. Our
+                    surgeons leverage minimally invasive techniques whenever
+                    possible, promoting quicker recovery times and reduced
+                    postoperative discomfort. Additionally, our operating rooms
+                    are equipped with advanced monitoring and imaging systems to
+                    enhance precision and improve surgical outcomes. Patient
+                    education is a key focus of our surgical services. We ensure
+                    that individuals and their families are well-informed about
+                    the surgical process, potential risks, and expected
+                    outcomes. This collaborative approach empowers patients to
+                    actively participate in their healthcare decisions,
+                    fostering a sense of confidence and trust in our surgical
+                    team. At Noble Health Care, we understand that undergoing
+                    surgery can be a significant life event, and we strive to
+                    create a supportive and reassuring environment for our
+                    patients. Our commitment to excellence in surgical services
+                    reflects our dedication to promoting health, restoring
+                    well-being, and enhancing the overall quality of life for
+                    those entrusted to our care.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Maternity Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Maternity Services</h1>
+                  <p class="milestone-description">
+                    Our Maternity Services at Noble Health Care are designed to
+                    provide expectant mothers with comprehensive and
+                    personalized care throughout the journey of pregnancy,
+                    childbirth, and postpartum. We prioritize the health and
+                    well-being of both mother and baby, offering a range of
+                    services to ensure a positive and memorable maternity
+                    experience. Prenatal care is a cornerstone of our maternity
+                    services, where our experienced obstetricians and healthcare
+                    professionals work closely with expectant mothers to monitor
+                    the health of both mother and baby. Regular check-ups,
+                    screenings, and educational sessions help promote a healthy
+                    pregnancy and identify any potential concerns early on. Our
+                    labor and delivery facilities are equipped with modern
+                    amenities to ensure a comfortable and safe birthing
+                    experience. Our compassionate and skilled maternity care
+                    team is dedicated to providing support and guidance to
+                    mothers during labor, emphasizing patient preferences and
+                    individualized birthing plans. We offer a range of birthing
+                    options, including natural childbirth, epidurals, and
+                    cesarean sections, with the goal of accommodating each
+                    mother's unique needs. Postpartum care is equally important,
+                    and our maternity services extend beyond childbirth to
+                    support new mothers in their recovery and adjustment to
+                    motherhood. Lactation consultants, postpartum nurses, and
+                    other specialists are available to provide guidance on
+                    breastfeeding, newborn care, and emotional well-being.
+                    Family-centered care is a key principle of our maternity
+                    services, encouraging the involvement of partners and family
+                    members in the birthing process. We strive to create a
+                    nurturing and inclusive environment where the joy of
+                    welcoming a new family member is celebrated. At Noble Health
+                    Care, we recognize the profound significance of the
+                    maternity journey and are committed to fostering a
+                    supportive and empowering experience for expectant mothers.
+                    Our Maternity Services are founded on the principles of
+                    compassion, safety, and personalized care to ensure the best
+                    possible start for every growing family.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pediatric Care -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Pediatric Care</h1>
+                  <p class="milestone-description">
+                    Our Pediatric Care services at Noble Health Care are
+                    dedicated to ensuring the health and well-being of infants,
+                    children, and adolescents. We understand the unique needs of
+                    young patients and strive to provide comprehensive,
+                    family-centered care that promotes both physical and
+                    emotional growth. From routine check-ups to specialized
+                    care, our team of pediatricians and healthcare professionals
+                    is committed to delivering high-quality medical services for
+                    children of all ages. Regular well-child visits are an
+                    essential component of our pediatric care, allowing us to
+                    monitor growth and development, provide vaccinations, and
+                    address any concerns or questions parents may have. In cases
+                    of illness or injury, our pediatric care team is
+                    well-equipped to diagnose and treat a wide range of
+                    pediatric conditions. We emphasize open communication with
+                    parents, ensuring they are informed and involved in the
+                    decision-making process regarding their child's healthcare.
+                    Our goal is to create a comfortable and reassuring
+                    environment for both children and their families. Preventive
+                    care is a key focus of our Pediatric Care services, with an
+                    emphasis on promoting healthy lifestyles and habits from an
+                    early age. We provide guidance on nutrition, safety
+                    measures, and developmental milestones to empower parents in
+                    fostering a supportive and nurturing environment for their
+                    children. For children with chronic conditions or
+                    specialized needs, our pediatric specialists collaborate to
+                    deliver comprehensive and coordinated care. This may include
+                    services from pediatric cardiologists, pulmonologists,
+                    neurologists, and other specialists, ensuring that each
+                    child receives the specific care required for their
+                    individual health needs. At Noble Health Care, we recognize
+                    the importance of fostering a positive and trusting
+                    relationship between healthcare providers, children, and
+                    their families. Our Pediatric Care services are designed to
+                    create a warm and friendly atmosphere where children feel
+                    comfortable and parents feel confident in the care their
+                    child receives. We are dedicated to supporting the health
+                    and happiness of every child who walks through our doors.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cancer Care (Oncology) -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Cancer Care (Oncology)</h1>
+                  <p class="milestone-description">
+                    Our Cancer Care, or Oncology, services at Noble Health Care
+                    are centered around providing compassionate and
+                    comprehensive care to individuals facing the challenges of
+                    cancer. We understand that a cancer diagnosis can be a
+                    life-altering experience, and our multidisciplinary team is
+                    committed to offering support, advanced medical treatments,
+                    and personalized attention to patients throughout their
+                    cancer journey. Our team of experienced oncologists,
+                    surgeons, radiation oncologists, and support staff
+                    collaborates to deliver state-of-the-art cancer care. From
+                    diagnosis through treatment and survivorship, we focus on
+                    tailoring care plans to each patient's unique needs,
+                    considering factors such as cancer type, stage, and
+                    individual health circumstances. Diagnostic services play a
+                    crucial role in our Cancer Care program, utilizing advanced
+                    imaging technologies, biopsies, and pathology to accurately
+                    identify and stage the disease. Our commitment to early
+                    detection and precise diagnosis allows for timely and
+                    targeted interventions, enhancing the effectiveness of
+                    treatment. Treatment modalities encompass a range of
+                    options, including surgery, chemotherapy, radiation therapy,
+                    immunotherapy, and targeted therapies. Our oncology team
+                    discusses these options with patients, ensuring they have a
+                    thorough understanding of their treatment plan and actively
+                    participate in decision-making. Beyond medical
+                    interventions, our Cancer Care services extend to holistic
+                    support for patients and their families. We offer
+                    counseling, nutritional guidance, pain management, and
+                    integrative therapies to address the physical, emotional,
+                    and psychological aspects of the cancer experience. Support
+                    groups and survivorship programs are also available to
+                    foster a sense of community and encouragement among
+                    patients. At Noble Health Care, we are dedicated to
+                    advancing cancer research and staying at the forefront of
+                    innovative treatments. Our goal is to provide not only
+                    excellent medical care but also a supportive environment
+                    that empowers individuals in their fight against cancer. We
+                    understand the importance of compassionate care and strive
+                    to be a beacon of hope for those navigating the challenges
+                    of a cancer diagnosis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Rehabilitation Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Rehabilitation Services</h1>
+                  <p class="milestone-description">
+                    Our Rehabilitation Services at Noble Health Care are
+                    designed to support individuals on their journey to recovery
+                    and optimal functioning following illness, injury, or
+                    surgery. We believe in a patient-centered approach that
+                    addresses the unique needs of each individual, promoting
+                    physical, emotional, and functional well-being. Our team of
+                    skilled and compassionate rehabilitation professionals
+                    includes physical therapists, occupational therapists,
+                    speech-language pathologists, and other specialists.
+                    Together, they collaborate to create personalized
+                    rehabilitation plans tailored to the specific conditions and
+                    goals of each patient. Physical Therapy: Our physical
+                    therapists focus on restoring mobility, strength, and
+                    flexibility. Whether recovering from orthopedic surgery,
+                    managing chronic pain, or rehabilitating after an injury,
+                    our physical therapy programs emphasize evidence-based
+                    practices to improve overall physical function. Occupational
+                    Therapy: Our occupational therapists assist individuals in
+                    regaining independence in their daily activities. From fine
+                    motor skills to activities of daily living, our goal is to
+                    enhance the quality of life and promote self-sufficiency for
+                    patients recovering from injury, surgery, or neurological
+                    conditions. Speech-Language Pathology: Our speech-language
+                    pathologists specialize in evaluating and treating
+                    communication disorders, swallowing difficulties, and
+                    cognitive impairments. Through targeted interventions, we
+                    help patients regain and enhance their communication skills
+                    and ensure safe swallowing. Rehabilitation Nursing: Our
+                    rehabilitation nursing team plays a vital role in providing
+                    comprehensive care, coordinating treatment plans, and
+                    supporting patients throughout their rehabilitation journey.
+                    They work closely with therapists to address both physical
+                    and emotional needs. Our Rehabilitation Services extend
+                    beyond the clinical setting, encompassing education and
+                    support for patients and their families. We emphasize the
+                    importance of self-management and equip individuals with the
+                    tools and strategies needed for long-term success. At Noble
+                    Health Care, we are committed to fostering an environment of
+                    encouragement and empowerment. Our Rehabilitation Services
+                    aim to not only restore function but also inspire
+                    individuals to achieve their highest level of independence
+                    and overall well-being.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mental Health Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Mental Health Services</h1>
+                  <p class="milestone-description">
+                    Our Mental Health Services at Noble Health Care are
+                    dedicated to providing comprehensive and compassionate care
+                    for individuals facing a range of mental health challenges.
+                    We understand the significance of mental well-being in
+                    overall health and strive to create a supportive environment
+                    for those seeking help. Our team of mental health
+                    professionals, including psychiatrists, psychologists,
+                    social workers, and counselors, is committed to offering
+                    personalized treatment plans tailored to each patient's
+                    unique needs. We prioritize a holistic approach that
+                    addresses mental, emotional, and behavioral aspects to
+                    promote lasting recovery. Psychiatric Evaluation and
+                    Diagnosis: Our experienced psychiatrists conduct thorough
+                    evaluations to assess symptoms, diagnose mental health
+                    conditions, and develop targeted treatment plans. This may
+                    involve medication management, psychotherapy, or a
+                    combination of both. Psychotherapy and Counseling: Our
+                    licensed psychologists and counselors provide evidence-based
+                    psychotherapy services to individuals, couples, and
+                    families. Through a collaborative and confidential
+                    therapeutic relationship, we support clients in exploring
+                    emotions, developing coping strategies, and fostering
+                    positive changes. Medication Management: For those who may
+                    benefit from psychiatric medications, our team works closely
+                    with patients to monitor and adjust prescriptions as needed.
+                    We prioritize open communication to ensure the most
+                    effective and well-tolerated treatment. Crisis Intervention
+                    and Support: Recognizing the importance of timely support
+                    during crises, our mental health services include crisis
+                    intervention. Our team is available to provide immediate
+                    assistance and support for individuals experiencing acute
+                    mental health challenges. Group Therapy and Support: We
+                    offer a variety of group therapy options to create a sense
+                    of community and shared understanding among individuals
+                    facing similar mental health concerns. Group settings
+                    provide a supportive space for shared experiences and mutual
+                    encouragement. Education and Prevention: At Noble Health
+                    Care, we are dedicated to mental health education and
+                    prevention. We conduct outreach programs to raise awareness,
+                    reduce stigma, and promote mental health in the community.
+                    Telehealth Services: To enhance accessibility, we provide
+                    telehealth services, allowing individuals to receive mental
+                    health support from the comfort of their homes. This
+                    approach ensures that quality care is accessible to a
+                    broader population. At Noble Health Care, we prioritize the
+                    well-being of our community. Our Mental Health Services aim
+                    not only to alleviate symptoms but also to empower
+                    individuals to lead fulfilling and resilient lives. We are
+                    committed to fostering a stigma-free environment where
+                    everyone feels supported on their journey to mental health
+                    and wellness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pharmacy Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Pharmacy Services</h1>
+                  <p class="milestone-description">
+                    Our Pharmacy Services at Noble Health Care are designed to
+                    ensure that patients receive safe, accurate, and timely
+                    access to medications as an integral part of their
+                    healthcare journey. We understand the critical role that
+                    medications play in managing health conditions and promoting
+                    overall well-being. Our pharmacy team is committed to
+                    providing high-quality services that prioritize patient
+                    safety, education, and convenience. Medication Dispensing:
+                    Our full-service pharmacy dispenses a wide range of
+                    prescription medications, over-the-counter products, and
+                    medical supplies. Our experienced pharmacists work closely
+                    with healthcare providers to ensure accurate and timely
+                    fulfillment of prescriptions, promoting adherence to
+                    prescribed medication regimens. Medication Counseling: We
+                    believe in empowering patients with information about their
+                    medications. Our pharmacists offer comprehensive medication
+                    counseling, including details about dosage, administration
+                    instructions, potential side effects, and the importance of
+                    adherence. This personalized approach enhances patient
+                    understanding and contributes to better health outcomes.
+                    Prescription Management: Our pharmacy utilizes advanced
+                    prescription management systems to streamline the
+                    prescription refill process. Patients can easily request
+                    refills, and our team works efficiently to coordinate with
+                    healthcare providers to authorize and process prescription
+                    renewals. Medication Therapy Management (MTM): For patients
+                    with complex medication regimens or multiple chronic
+                    conditions, our Medication Therapy Management services
+                    ensure a thorough review of medications. This collaborative
+                    effort between pharmacists and healthcare providers helps
+                    optimize medication therapy, identify potential
+                    interactions, and address any concerns to enhance overall
+                    treatment effectiveness. Specialty Pharmacy Services: In
+                    addition to general pharmacy services, we offer specialty
+                    pharmacy services for patients requiring medications for
+                    complex, chronic, or rare conditions. Our specialized team
+                    provides personalized support, including medication
+                    coordination, patient education, and ongoing monitoring.
+                    Compounding Services: Our pharmacy includes compounding
+                    services, allowing us to tailor medications to meet the
+                    unique needs of individual patients. This is particularly
+                    beneficial for those with allergies, sensitivities, or
+                    specific dosage requirements not available in commercial
+                    products. Immunization Services: As part of our commitment
+                    to preventive care, our pharmacy provides immunization
+                    services for a range of vaccines, including flu shots,
+                    travel vaccines, and other recommended vaccinations. This
+                    supports community health initiatives and helps protect
+                    individuals from vaccine-preventable diseases. Online
+                    Prescription Services: To enhance accessibility and
+                    convenience, we offer online prescription services, allowing
+                    patients to request refills, access medication information,
+                    and communicate with our pharmacy team through secure online
+                    platforms. At Noble Health Care, we prioritize the safety
+                    and well-being of our patients. Our Pharmacy Services are
+                    dedicated to fostering a collaborative and patient-centered
+                    approach, ensuring that individuals receive the highest
+                    standard of pharmaceutical care throughout their healthcare
+                    journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dental Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Dental Services</h1>
+                  <p class="milestone-description">
+                    At Noble Health Care, our Dental Services are committed to
+                    providing comprehensive and personalized oral healthcare,
+                    promoting optimal dental wellness for patients of all ages.
+                    We understand the importance of oral health in contributing
+                    to overall well-being, and our skilled dental team strives
+                    to deliver high-quality services in a comfortable and
+                    patient-friendly environment. Preventive Dentistry: We
+                    emphasize the significance of preventive care to maintain
+                    healthy teeth and gums. Our dental professionals offer
+                    routine check-ups, cleanings, and screenings to identify
+                    potential issues early on. Through patient education, we
+                    empower individuals to adopt good oral hygiene practices at
+                    home. Restorative Dentistry: In the event of dental issues
+                    such as cavities, decay, or damage, our restorative
+                    dentistry services aim to restore the function and
+                    aesthetics of the teeth. This includes procedures like
+                    fillings, crowns, and bridges, tailored to address each
+                    patient's unique needs. Cosmetic Dentistry: We understand
+                    that a confident smile contributes to overall self-esteem.
+                    Our cosmetic dentistry services encompass a range of
+                    treatments, including teeth whitening, veneers, and cosmetic
+                    bonding, to enhance the appearance of teeth and create
+                    beautiful, natural-looking smiles. Orthodontic Services: For
+                    individuals seeking orthodontic care, our services include
+                    the diagnosis and treatment of misaligned teeth and jaws. We
+                    offer orthodontic solutions such as braces and clear
+                    aligners, working to improve both dental function and
+                    aesthetics. Oral Surgery: Our experienced oral surgeons
+                    provide a range of surgical procedures, including tooth
+                    extractions, wisdom tooth removal, and minor oral surgeries.
+                    Patient comfort and safety are our top priorities, and our
+                    team ensures a supportive environment for those undergoing
+                    oral surgical interventions. Pediatric Dentistry: We
+                    recognize the unique dental needs of children and provide
+                    specialized pediatric dentistry services. Our team is
+                    dedicated to creating a positive and comfortable experience
+                    for young patients, fostering good oral health habits from
+                    an early age. Emergency Dental Care: Dental emergencies can
+                    happen at any time, and our clinic is equipped to handle
+                    urgent dental issues promptly. Whether it's severe tooth
+                    pain, a dental injury, or other emergencies, our team is
+                    available to provide timely and effective care.
+                    Patient-Centered Approach: We prioritize open communication
+                    and collaboration with patients. Our dental professionals
+                    take the time to understand individual concerns, answer
+                    questions, and develop personalized treatment plans that
+                    align with each patient's oral health goals.
+                    State-of-the-Art Facilities: Our dental clinic is equipped
+                    with modern technologies and amenities to ensure the
+                    delivery of efficient and effective dental care. From
+                    digital imaging to advanced diagnostic tools, we strive to
+                    stay at the forefront of dental healthcare. At Noble Health
+                    Care, we are dedicated to promoting oral health and
+                    delivering exceptional Dental Services. Our commitment to
+                    patient satisfaction, combined with a focus on preventive
+                    and personalized care, sets us apart as a trusted
+                    destination for comprehensive dental wellness.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Home Health Care -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Home Health Care</h1>
+                  <p class="milestone-description">
+                    At Noble Health Care, we understand the importance of
+                    comprehensive healthcare that extends beyond traditional
+                    clinical settings. Our Home Health Care services are
+                    designed to bring personalized and professional medical care
+                    to the comfort of your home. We believe in empowering
+                    patients to maintain their independence and receive quality
+                    care in familiar surroundings. Skilled Nursing: Our team of
+                    skilled and compassionate nurses provides a range of
+                    services, including wound care, medication management,
+                    injections, and monitoring of vital signs. With a
+                    patient-centered approach, we tailor nursing care plans to
+                    meet the unique needs of each individual. Rehabilitation
+                    Services: For patients recovering from surgery, illness, or
+                    injury, our Home Health Care includes rehabilitation
+                    services delivered in the home environment. Physical
+                    therapy, occupational therapy, and speech therapy are
+                    offered to enhance mobility, regain independence, and
+                    improve overall well-being. Chronic Disease Management: We
+                    specialize in the management of chronic conditions such as
+                    diabetes, hypertension, and respiratory disorders. Our
+                    healthcare professionals work closely with patients and
+                    their families to develop comprehensive care plans aimed at
+                    controlling symptoms and preventing complications. Home
+                    Medical Equipment: To ensure a seamless healthcare
+                    experience at home, we provide access to essential medical
+                    equipment and supplies. This may include mobility aids,
+                    respiratory equipment, and devices to support activities of
+                    daily living. Palliative Care: Our Home Health Care extends
+                    to providing palliative care for individuals facing serious
+                    illnesses. The focus is on improving the quality of life by
+                    managing symptoms, offering emotional support, and enhancing
+                    overall comfort. Wound Care: Skilled nursing services
+                    encompass specialized wound care for patients with acute or
+                    chronic wounds. Our team employs evidence-based practices to
+                    promote healing and prevent infections, with regular
+                    assessments to track progress. Medication Management: We
+                    prioritize safe and effective medication management,
+                    ensuring that patients receive the right medications at the
+                    right time. Our healthcare professionals educate patients
+                    and caregivers on medication adherence and potential side
+                    effects. Telehealth Services: Embracing modern technology,
+                    our Home Health Care includes telehealth services for
+                    virtual consultations and remote monitoring. This enables
+                    timely communication between patients and healthcare
+                    providers, fostering ongoing support and intervention.
+                    Personalized Care Plans: Recognizing that every patient is
+                    unique, we develop personalized care plans in collaboration
+                    with patients, their families, and healthcare professionals.
+                    This individualized approach ensures that care aligns with
+                    specific health goals and preferences. Compassionate
+                    Caregivers: Our team of dedicated and compassionate
+                    caregivers, including nurses, therapists, and home health
+                    aides, is committed to providing not only medical support
+                    but also emotional and social companionship. We strive to
+                    create a supportive and caring environment for patients and
+                    their families. Choosing Home Health Care from Noble Health
+                    Care means choosing a healthcare partner that values your
+                    well-being and strives to enhance your quality of life.
+                    Whether recovering from an illness, managing a chronic
+                    condition, or seeking palliative care, our comprehensive and
+                    compassionate services bring healthcare to your doorstep.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Chronic Disease Management -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Chronic Disease Management</h1>
+                  <p class="milestone-description">
+                    Chronic Disease Management at Noble Health Care is a patient-centered and multidisciplinary approach designed to empower individuals facing long-term health conditions. Our dedicated team of healthcare professionals collaborates to create personalized care plans, incorporating education, regular monitoring, and lifestyle modifications tailored to each patient's unique needs. By emphasizing self-management skills, optimizing medication regimens, and promoting healthy habits, we aim to enhance the overall well-being of individuals dealing with chronic diseases. Through advanced technology and coordinated care, our program strives to improve treatment outcomes, reduce complications, and enable patients to lead fulfilling lives while effectively managing their health challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Wellness and Lifestyle Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">
+                    Wellness and Lifestyle Services
+                  </h1>
+                  <p class="milestone-description">
+                    Wellness and Lifestyle Services at Noble Health Care are committed to promoting holistic health and empowering individuals to achieve their optimal well-being. Our comprehensive approach integrates preventive care, health screenings, and lifestyle counseling to support patients in making informed choices for a healthier life. From fitness assessments to nutrition guidance, our dedicated team collaborates with patients to create personalized wellness plans that encompass physical, mental, and emotional aspects of health. We prioritize preventive measures and provide resources for stress management, smoking cessation, and maintaining a balanced lifestyle. Through educational programs and proactive health initiatives, we aspire to inspire and guide individuals towards sustained wellness, fostering a healthier community overall.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Geriatric Care -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Geriatric Care</h1>
+                  <p class="milestone-description">
+                    Our Geriatric Care services cater specifically to the unique healthcare needs of older adults, focusing on promoting their well-being and enhancing their quality of life. At Noble Health Care, our multidisciplinary team of healthcare professionals is trained to address the complex medical, social, and emotional aspects associated with aging. We offer comprehensive geriatric assessments, specialized care plans, and coordination of services to manage chronic conditions commonly affecting seniors. Our compassionate approach emphasizes personalized care, fall prevention strategies, medication management, and support for caregivers. With a commitment to dignity and respect, we strive to optimize the health and independence of our elderly patients, fostering a supportive environment that promotes healthy aging.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Telemedicine Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Telemedicine Services</h1>
+                  <p class="milestone-description">
+                    Our Telemedicine Services at Noble Health Care provide patients with accessible and convenient healthcare solutions from the comfort of their homes. Leveraging advanced technology, we offer virtual consultations with our experienced healthcare professionals, ensuring timely and efficient medical care. Patients can engage in secure video or phone appointments, receive medical advice, discuss symptoms, and even obtain prescriptions without the need for in-person visits. Our Telemedicine Services enhance healthcare accessibility, particularly for those with mobility constraints or residing in remote areas. Emphasizing patient privacy and the highest standards of care, we are dedicated to leveraging innovation to connect patients with the medical expertise they need, promoting a seamless and patient-centric healthcare experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Support Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Support Services</h1>
+                  <p class="milestone-description">
+                    Our Support Services at Noble Health Care are designed to complement our medical offerings and ensure a comprehensive and holistic approach to patient care. From dedicated patient advocacy and counseling services to assistance with navigating insurance processes, our support team is committed to addressing the diverse needs of our patients. We understand that navigating the complexities of healthcare can be overwhelming, and our support services aim to provide guidance and assistance throughout the entire patient journey. Whether it's coordinating appointments, offering emotional support, or providing resources for additional assistance, our dedicated support team is here to enhance the overall patient experience and contribute to the well-being of our community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pharmacy Services -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Pharmacy Services</h1>
+                  <p class="milestone-description">
+                    Our Pharmacy Services at Noble Health Care are dedicated to ensuring that patients receive optimal and personalized medication management. With a focus on patient safety, convenience, and accessibility, our pharmacy team works collaboratively with healthcare providers to dispense medications, offer medication counseling, and address any concerns or questions patients may have. We prioritize accuracy in medication dispensing and strive to educate patients on proper medication usage, potential side effects, and drug interactions. Whether it's filling prescriptions, providing over-the-counter recommendations, or offering consultation services, our pharmacy is committed to promoting patient well-being through the highest standards of pharmaceutical care.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Health Check Packages -->
+          <div class="milestone-container d-flex justify-content-start mb-3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-1 pt-2">
+                  <i class="fa-solid fa-square-check checkbox-icon"></i>
+                </div>
+                <!-- milestone heading and description -->
+                <div class="col-11">
+                  <h1 class="milestone-heading">Health Check Packages</h1>
+                  <p class="milestone-description">
+                    Our Health Check Packages at Noble Health Care are designed to empower individuals with proactive healthcare solutions, promoting early detection and prevention of potential health issues. Tailored to suit varying needs and lifestyles, these comprehensive packages encompass a range of diagnostic tests and screenings, providing a holistic assessment of one's health. From basic wellness check-ups to more specialized screenings, our packages offer valuable insights into key health indicators, allowing individuals to take proactive steps towards maintaining or improving their well-being. With a focus on preventive healthcare, these packages are an essential tool for those seeking to monitor their health, identify risk factors, and make informed decisions for a healthier and more fulfilling life.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Footer section -->
+      <div class="footer-section pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!-- Hospital Logos -->
+              <div class="text-center">
+                <img
+                  src="{% static 'image/logo1.png' %}"
+                  alt="logo of the Hospital"
+                  class="footer-section-logo pt-4"
+                />
+              </div>
+
+              <!-- Mail id -->
+              <div class="text-center mt-3">
+                <a
+                  href="mailto:npurush11@gmail.com"
+                  class="footer-section-mail-id"
+                  >npurush11@gmail.com</a
+                >
+              </div>
+
+              <!-- Address -->
+              <div class="text-center mt-3">
+                <address class="footer-section-address">
+                  No:93, Ambedkar nagar, 1<sup>st</sup> street, kolathur,
+                  chennai <span class="nowrap"></span>-600099.
+                </address>
+              </div>
+              <!-- copy rights -->
+              <div class="copyRightsCont">
+                <p>&copy; 2023 Noble Health Care. All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* Reseting the default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root {
+  --backgroundColor: #f5f5f5;
+  --headingColor: #000000;
+  --textColor: #333333;
+  --footerColor: #cccccc;
+}
+
+/* Overall and  general styling */
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--backgroundColor);
+}
+
+/* Aligning the nav links to the left hand side */
+#navbar-nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the Nav bar items */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ) {
+  color: var(--textColor);
+  font-family: "Roboto", sans-serif;
+}
+/* Styling the Nav bar items when hover over it */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ):hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+/* Styling the dropdown box */
+.dropdown-menu {
+  background: linear-gradient(to bottom, #eaeaea, #ffffff);
+  border: 1px solid rgb(173, 170, 170);
+}
+/* Styling the Drop down item */
+.dropdown-item {
+  font-weight: 400;
+  color: var(--textColor);
+}
+/* Styling the Drop down item when hover */
+.dropdown-item:hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+
+/* styling the gallery section */
+.gallery-section-container {
+  margin-top: 130px;
+  background-color: rgba(255, 255, 255, 0.76);
+}
+/* styling the gallery heading */
+.gallery-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+/* styling the gallery nav bar */
+.gallery-nav {
+  background: linear-gradient(to bottom, #c5c4c4, #646464);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* styling the nav elements */
+.gallery-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.gallery-nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.gallery-nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+/* styling the link when we hover over it */
+.gallery-nav a:is(:hover, :focus) {
+  color: black;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* Given margin to the top of each section */
+.gallery-section {
+  margin-top: 50px;
+}
+
+/* styling the gallery image */
+.gallery img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* styling the image when we hover over it */
+.gallery img:hover {
+  transform: scale(1.1);
+}
+/* styling the section heading */
+.text-center {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--headingColor);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Styling the Footer section */
+/* Styling the footer section */
+/* styling the footer section background */
+.footer-section {
+  background-color: var(--footerColor);
+}
+/* styling the footer section logo */
+.footer-section-logo {
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--textColor);
+  transition: transform 0.2s ease;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id:is(:hover, :focus) {
+  color: rgb(8, 8, 8);
+  font-weight: 600;
+}
+/* stylint the footer section address */
+.footer-section-address {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+/* Styling the copyright content */
+.copyRightsCont {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+.nowrap {
+  white-space: nowrap;
+}

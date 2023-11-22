@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* Reseting the default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root {
+  --backgroundColor: #f5f5f5;
+  --headingColor: #000000;
+  --textColor: #333333;
+  --footerColor: #cccccc;
+}
+
+/* Overall and  general styling */
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--backgroundColor);
+}
+/* styling the horizontal rule */
+hr {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Aligning the nav links to the left hand side */
+#navbar-nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the Nav bar items */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ) {
+  color: var(--textColor);
+  font-family: "Roboto", sans-serif;
+}
+/* Styling the Nav bar items when hover over it */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ):hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+/* Styling the dropdown box */
+.dropdown-menu {
+  background: linear-gradient(to bottom, #eaeaea, #ffffff);
+  border: 1px solid rgb(173, 170, 170);
+}
+/* Styling the Drop down item */
+.dropdown-item {
+  font-weight: 400;
+  color: var(--textColor);
+}
+/* Styling the Drop down item when hover */
+.dropdown-item:hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+
+/* Hero section */
+.hero-section {
+  text-align: center;
+}
+/*Hero section background image  */
+.hero-section img {
+  width: 100vw;
+  border-bottom: 5px solid black; /* Optional: Add a border for a polished look */
+}
+/* styling the hero section text */
+.hero-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  color: white;
+}
+.hero-text {
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/* make hero section responsive for the small device */
+@media screen and (max-width: 690px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}
+/* make hero section responsive for the small device */
+@media screen and (max-width: 500px) {
+  .hero-section {
+    margin-top: 130px;
+  }
+}
+/* make hero section responsive for the small device */
+@media screen and (max-width: 300px) {
+  .hero-section {
+    margin-top: 200px;
+  }
+  .hero-text h1 {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+  }
+
+  .hero-text p {
+    font-size: 0.8rem;
+  }
+}
+/* styling the introduction section */
+#introduction {
+  background: linear-gradient(to bottom, #333333, #999999);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional styling for text content */
+#introduction .container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background for better text readability */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Optional: Add a subtle shadow for depth */
+}
+/* styling the heading and paragraph */
+#introduction p {
+  background: linear-gradient(45deg, #d0b200, #3b3301);
+  -webkit-background-clip: text; /* WebKit/Blink browsers */
+  color: transparent;
+  font-size: 1rem;
+}
+#introduction h1 {
+  color: black;
+  font-size: 2.3rem;
+}
+/* make hero section responsive for the small device */
+@media screen and (max-width: 500px) {
+  #introduction {
+    padding-top: 5px;
+  }
+  #introduction h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+  }
+  #introduction p {
+    font-size: 0.75rem;
+  }
+}
+/* make hero section responsive for the small device */
+@media screen and (max-width: 300px) {
+  #introduction {
+    padding-top: 5px;
+  }
+  #introduction h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    padding-bottom: 1px;
+  }
+  #introduction p {
+    font-size: 0.55rem;
+  }
+}
+
+/* styling the medical service card section */
+.medical-service-card-container {
+  background: linear-gradient(to top, #333333, #999999);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between cards */
+}
+
+/* styling the heading */
+.medical-service-card-section-heading {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+/* styling the card container */
+.medical-card-container {
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(
+    31,
+    30,
+    30,
+    0.479
+  ); /* Semi-transparent white background for better text readability */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.medical-card-container:hover {
+  transform: scale(1.15);
+}
+/* styling the icon container */
+.medical-card-icon-container {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  padding: 0px;
+  margin-bottom: 10px;
+}
+/*styling the icon  */
+.medical-card-icon {
+  width: 100px;
+}
+/* styling the medical-card-heading-container */
+.medical-card-heading-container {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+/* styling the card heading */
+.medical-card-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+/* styling the card link */
+.medical-card-service-link {
+  text-decoration: none;
+  color: white;
+}
+/* styling the card heading when we hover over it */
+.medical-card-heading :is(:hover, :focus) {
+  transform: scale(1.09);
+  color: dodgerblue;
+  text-decoration: underline;
+}
+.medical-card-service-link :is(:hover, :focus) {
+  transform: scale(1.09);
+  color: dodgerblue;
+  text-decoration: underline;
+}
+
+/* Styling the Footer section */
+/* Styling the footer section */
+/* styling the footer section background */
+.footer-section {
+  background-color: var(--footerColor);
+}
+/* styling the footer section logo */
+.footer-section-logo {
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--textColor);
+  transition: transform 0.2s ease;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id:is(:hover, :focus) {
+  color: rgb(8, 8, 8);
+  font-weight: 600;
+}
+/* stylint the footer section address */
+.footer-section-address {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+/* Styling the copyright content */
+.copyRightsCont {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+.nowrap {
+  white-space: nowrap;
+}

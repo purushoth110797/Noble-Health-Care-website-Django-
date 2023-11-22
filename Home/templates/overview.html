@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Purushothaman" />
+    <meta
+      name="description"
+      content="Welcome to Noble Health Care, a leading healthcare institution dedicated to providing comprehensive medical services. Our experienced team of healthcare professionals is committed to delivering high-quality care and treatment. Explore our services, facilities, and patient resources for your health and well-being."
+    />
+    <title>Noble Health Care</title>
+    <!-- Linking the bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/overview.css' %}" />
+    <!-- Linking the JS file -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- favicon for the website -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'image/logo1.png' %}"
+      type="image/x-icon"
+    />
+    <!-- Linking the bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="{% static 'image/logo1.png' %}"
+              alt="Hospotal logo"
+              width="200"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" id="navbar-nav">
+              <!-- Home -->
+              <li class="nav-item">
+                <a class="nav-link" id="nav-item1" href="/Home/">Home</a>
+              </li>
+              <!--About -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item2"
+                >
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/overview/"
+                      >Overview</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/Home/vision_mission/"
+                      >Vision & Mission</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/awards/"
+                      >Milestones</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/gallery/"
+                      >Gallery</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/Home/careers/"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Doctors -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item3"
+                >
+                  Doctors
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctors/"
+                      >Doctors</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctor_profile/"
+                      >Doctors Profile</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/search_doctors/"
+                      >Search Doctor</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/doctors_list/doctors_availability/"
+                      >Doctors availability</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Appointment -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item6"
+                >
+                  Appointment
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/booking_form/"
+                      >Booking form</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/booking_status/"
+                      >Booking Status</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a class="dropdown-item pt-0 pb-0" href="/appointment/edit/"
+                      >Edit</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/cancel/"
+                      >cancel</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/appointment/history/"
+                      >History</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!--Medical services -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="nav-item7"
+                >
+                  Medical Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/list/"
+                      >List</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/details/"
+                      >Details</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <a
+                      class="dropdown-item pt-0 pb-0"
+                      href="/medical_services/pricing_info/"
+                      >Pricing and Insurance Info</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- overview banner section -->
+      <div class="hero-section">
+        <img
+          src="{% static 'image/overview/overview.webp' %}"
+          alt="Hospital Overview Image"
+        />
+        <div class="hero-text">
+          <h1>Welcome to Noble Health Care</h1>
+          <p>Your Partner in Health and Wellness</p>
+        </div>
+      </div>
+      <!-- introduction -->
+      <section id="introduction" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="section-heading pt-3 pb-3">
+                Welcome to Noble Health Care
+              </h2>
+              <p class="text-muted">
+                Your Trusted Partner in Health and Wellness
+              </p>
+              <p class="text-justify">
+                At Noble Health Care, we are dedicated to providing exceptional
+                healthcare services with a focus on compassion, innovation, and
+                excellence. Our mission is to enhance the well-being of our
+                community by delivering personalized and high-quality medical
+                care.
+              </p>
+              <p class="text-justify">
+                What sets us apart is our commitment to patient-centered care,
+                cutting-edge medical technology, and a team of highly skilled
+                healthcare professionals. We understand that each patient is
+                unique, and we tailor our services to meet individual needs.
+              </p>
+              <p class="text-justify pb-3">
+                Our hospital specializes in a wide range of medical services,
+                including Comprehensive Cancer Care, Cardiac Excellence, Women's
+                Health Center, Orthopedic Center of Excellence, Neuroscience
+                Institute etc. Whether you're seeking routine check-ups or
+                specialized treatments, you can trust Noble Health Care for
+                comprehensive and compassionate healthcare.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- medical services card -->
+      <div class="medical-service-card-container pt-5 pb-5">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- service card section heading -->
+            <h1 class="medical-service-card-section-heading text-center">
+              Medical services
+            </h1>
+            <!-- medical card 1 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/cardiology.png' %}"
+                    alt="cardiology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Cardiology</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 2 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/dermatology.png' %}"
+                    alt="dermatology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Dermatology</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 3 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/endocrinology.png' %}"
+                    alt="endocrinology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Endocrinology</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 4 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/infectious-disease.png' %}"
+                    alt="infectious disease icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Infectious Disease</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 5 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/neurology.png' %}"
+                    alt="neurology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Neurology</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 6 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/orthopedics.jpeg' %}"
+                    alt="orthopedics icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Orthopedics</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 7 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/pediatrics.png' %}"
+                    alt="pediatrics icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Pediatrics</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 8 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/gaetroentrology.png' %}"
+                    alt="gaetroentrology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Gaetroentrology</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 9 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/nephrology.png' %}"
+                    alt="nephrology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Nephrology</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 10 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/psychiatry.png' %}"
+                    alt="psychiatry icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Psychiatry</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 11 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/pulmonology.png' %}"
+                    alt="pulmonology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Pulmonology</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 12 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/radiology.png' %}"
+                    alt="radiology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Radiology</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 13 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/rheumatology.png' %}"
+                    alt="rheumatology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Rheumatology</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 14 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/oncology.png' %}"
+                    alt="oncology icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link">Oncology</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 15 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/emergency-medicine.png' %}"
+                    alt="emergency medicine icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Emergency Medicine</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 16 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/internal-medicine.png' %}"
+                    alt="internal medicine icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Internal Medicine</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 17 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/diagnostic-imaging.png' %}"
+                    alt="Diagnostic imaging icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Diagnostic Imaging</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- medical card 18 -->
+            <div class="col-12 col-md-4 col-lg-2">
+              <div class="medical-card-container">
+                <!-- medical card icons -->
+                <div class="medical-card-icon-container">
+                  <img
+                    src="{% static 'image/overview/medical_service_card/mental-health.png' %}"
+                    alt="mental health icon"
+                    class="medical-card-icon"
+                  />
+                </div>
+                <!-- medical card heading -->
+                <div class="medical-card-heading-container">
+                  <h2 class="medical-card-heading">
+                    <a href="/" class="medical-card-service-link"
+                      >Mental Health</a
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer section -->
+      <div class="footer-section pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!-- Hospital Logos -->
+              <div class="text-center">
+                <img
+                  src="{% static 'image/logo1.png' %}"
+                  alt="logo of the Hospital"
+                  class="footer-section-logo pt-4"
+                />
+              </div>
+
+              <!-- Mail id -->
+              <div class="text-center mt-3">
+                <a
+                  href="mailto:npurush11@gmail.com"
+                  class="footer-section-mail-id"
+                  >npurush11@gmail.com</a
+                >
+              </div>
+
+              <!-- Address -->
+              <div class="text-center mt-3">
+                <address class="footer-section-address">
+                  No:93, Ambedkar nagar, 1<sup>st</sup> street, kolathur,
+                  chennai <span class="nowrap"></span>-600099.
+                </address>
+              </div>
+              <!-- copy rights -->
+              <div class="copyRightsCont">
+                <p>&copy; 2023 Noble Health Care. All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
