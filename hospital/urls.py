@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from accounts.views import SignupView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,3 +28,5 @@ urlpatterns = [
     path("appointment/", include("appointment.urls")),
     path("medical_services/", include("medical_services.urls")),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
