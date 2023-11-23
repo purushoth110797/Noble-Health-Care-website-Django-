@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* Reseting the default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root {
+  --backgroundColor: #f5f5f5;
+  --headingColor: #000000;
+  --textColor: #333333;
+  --footerColor: #cccccc;
+}
+
+/* Overall and  general styling */
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--backgroundColor);
+}
+
+/* Aligning the nav links to the left hand side */
+#navbar-nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the Nav bar items */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ) {
+  color: var(--textColor);
+  font-family: "Roboto", sans-serif;
+}
+/* Styling the Nav bar items when hover over it */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ):hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+/* Styling the dropdown box */
+.dropdown-menu {
+  background: linear-gradient(to bottom, #eaeaea, #ffffff);
+  border: 1px solid rgb(173, 170, 170);
+}
+/* Styling the Drop down item */
+.dropdown-item {
+  font-weight: 400;
+  color: var(--textColor);
+}
+/* Styling the Drop down item when hover */
+.dropdown-item:hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+
+/* Styling the main section */
+/* Styling the background banner image */
+.banner-section-image-container {
+  background-image: url("../images/banner_section.jpg");
+  height: 100vh;
+  background-size: cover;
+  align-content: center;
+  position: relative;
+}
+.banner-container {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+/* styling the banner section heading */
+.banner-heading {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+/* Styling the banner description */
+.banner-description {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the button */
+.book-appointment-btn {
+  width: 200px;
+  height: 45px;
+  color: white;
+  background-image: linear-gradient(#d0b200, #a58d00);
+  border-width: 0;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+/* styling the button when hover over it */
+.book-appointment-btn:is(:hover, :focus) {
+  color: white;
+  background-image: linear-gradient(#d0b200, #3b3301);
+  border: 1px solid #d0b200;
+}
+
+/* styling the dummy heading */
+.dummy {
+  font-family: cursive;
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 200px;
+}
+
+/* Styling the Footer section */
+/* Styling the footer section */
+/* styling the footer section background */
+.footer-section {
+  background-color: var(--footerColor);
+}
+/* styling the footer section logo */
+.footer-section-logo {
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--textColor);
+  transition: transform 0.2s ease;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id:is(:hover, :focus) {
+  color: rgb(8, 8, 8);
+  font-weight: 600;
+}
+/* stylint the footer section address */
+.footer-section-address {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+/* Styling the copyright content */
+.copyRightsCont {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+.nowrap {
+  white-space: nowrap;
+}

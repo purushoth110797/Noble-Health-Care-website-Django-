@@ -14,8 +14,7 @@ __pycache__/
 
 # Ignore media and static files
 media/
-static/
-staticfiles/
+
 
 # Ignore virtual environment
 venv/

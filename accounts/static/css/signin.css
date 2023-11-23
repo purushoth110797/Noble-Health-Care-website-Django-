@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Reseting the default padding and margin */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root{
+    --backgroundColor: #262626;
+    --headingColor: #FFFFFF;
+    --textColor: #DDDDDD;
+    --footerColor: #CCCCCC;
+    --cardColor: #333333;
+}
+
+/* General styling */
+html{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--backgroundColor);
+}
+/* styling the form background container */
+.form-container{
+    background-color: var(--cardColor);
+    background-image: url("../image/form3.jpg");
+}
+/* styling the heading */
+.signin-heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    padding: 25px;
+    color: var(--headingColor);
+}
+/* styling the description */
+.signin-text{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 30px;
+    color: var(--textColor);
+}
+/* styling the sign up link */
+.signup-link{
+    color: var(--headingColor);
+    font-size: 1.0rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.30s ease-in-out;
+}
+/* styling the sign up link  when we hover over it*/
+.signup-link:is(:hover, :focus){
+    transform: scale(1.08);
+    color: dodgerblue;
+    text-decoration: underline;
+}
+/* Container for the form elements */
+.signin-form-container {
+    background-color: #FFFFFF;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 20px auto; /* Center horizontally */
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--footerColor);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    margin-top: 30px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

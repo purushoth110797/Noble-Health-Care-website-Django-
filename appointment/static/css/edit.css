@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* Reseting the default padding and margin */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root{
+    --backgroundColor: #F5F5F5;
+    --headingColor: #000000;
+    --textColor: #333333;
+    --footerColor: #CCCCCC;
+}
+
+/* Overall and  general styling */
+html{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--backgroundColor);
+}
+/* styling the body with background image */
+body{
+    background-image: linear-gradient(to right, #4caf50, #ffc107);
+}
+
+
+/* Aligning the nav links to the left hand side */
+#navbar-nav{
+    margin-left: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+/* Styling the Nav bar items */
+:is(#nav-item1, #nav-item2, #nav-item3, #nav-item4, #nav-item5,#nav-item6, #nav-item7){
+    color: var(--textColor);
+    font-family: 'Roboto', sans-serif;
+}
+/* Styling the Nav bar items when hover over it */
+:is(#nav-item1, #nav-item2, #nav-item3, #nav-item4, #nav-item5,#nav-item6, #nav-item7):hover{
+    text-decoration: underline;
+    text-shadow: 3px 3px 5px gray;
+}
+/* Styling the dropdown box */
+.dropdown-menu{
+    background: linear-gradient(to bottom, #EAEAEA, #FFFFFF);
+    border: 1px solid rgb(173, 170, 170);
+}
+/* Styling the Drop down item */
+.dropdown-item{
+    font-weight: 400;
+    color: var(--textColor);
+}
+/* Styling the Drop down item when hover */
+.dropdown-item:hover{
+    text-decoration: underline;
+    text-shadow: 3px 3px 5px gray;
+}
+
+
+/* styling the table */
+/* styling the table container */
+.tblContainer{
+    padding-top: 130px;
+    width: 100vw;
+    padding-bottom: 100px;
+}
+/* styling the table */
+/* Style for the entire table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1px auto;
+    table-layout: fixed;
+}
+/* styling the head */
+thead{
+    background-color: var(--backgroundColor);
+    border: 2px solid black;
+}
+/* styling the heading */
+.caption {
+    color: var(--headingColor);
+    font-size: 2.5em;
+    margin-bottom: 0px;
+    font-weight: 600;
+    text-align: center;
+}
+/* Style for table header (th) cells */
+th {
+    color: var(--textColor);
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* Style for table data (td) cells */
+td {
+    color: var(--textColor);
+    padding: 10px;
+    text-align: left;
+    border: 2px solid black;
+}
+/* styling the edit icon */
+.editIcon{
+    font-size: 1.8rem;
+    color: black;
+    transition: transform 0.20s ease;
+}
+/* styling when hover overit */
+.editIcon:is(:hover, :focus){
+    color: blue;
+    transform: scale(1.2);
+}
+
+.tblContainer td:nth-child(5) {
+    text-align: center;
+  }
+
+/* Hover effect */
+.confirmed-row:hover,
+.waiting-row:hover,
+.completed-row:hover {
+    background: linear-gradient(to right, #c9c6c6, #4c7183); /* dark grey gradient on hover */
+    color: #ffcc00; /* yellow text on hover */
+}
+
+/* dynamically change the color of the row based on the staus */
+.confirmed-row {
+    background-color: #5cb85c; /* green */
+}
+
+.waiting-row {
+    background-color: #5bc0de; /* blue */
+}
+
+.completed-row {
+    background-color: #d3d3d3; /* grey */
+}
+/* make the table responsive */
+/* controling the table width */
+/* Add media query for small screens */
+@media only screen and (max-width: 600px) {
+    /* Specify styles for small screens */
+    .tblContainer table {
+      width: 100%;
+    }
+    .tblContainer th:nth-child(2),
+  .tblContainer td:nth-child(2) {
+    display: none;
+  }
+  /* Style for table header (th) cells */
+    th {
+        font-size: 0.7rem;
+        font-weight: 700;
+    }
+
+    /* Style for table data (td) cells */
+    td {
+        font-size: 0.8rem;
+    }
+    .editIcon{
+        font-size: 1.0rem;
+        color: black;
+    }
+    
+    .tblContainer td:nth-child(5) {
+        text-align: center;
+      }
+  }
+
+
+
+
+
+/* Styling the Footer section */
+/* Styling the footer section */
+/* styling the footer section background */
+.footer-section{
+    background-color: var(--footerColor);
+}
+/* styling the footer section logo */
+.footer-section-logo{
+    margin-top: 20px;
+    width: 250px;
+    height: auto;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--textColor);
+    transition: transform 0.20s ease;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id:is(:hover,:focus){
+    color: rgb(8, 8, 8);
+    font-weight: 600;
+}
+/* stylint the footer section address */
+.footer-section-address{
+    font-size: 1.2rem;
+    color: var(--textColor);
+}
+/* Styling the copyright content */
+.copyRightsCont{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--textColor);
+}
+.nowrap{
+    white-space: nowrap;
+}

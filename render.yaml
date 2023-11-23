@@ -3,3 +3,6 @@ services:
     type: web
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn hospital.wsgi:application --workers 4
+    static:
+        - url: /static/
+          dir: staticfiles/

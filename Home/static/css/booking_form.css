@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* Reseting the default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root {
+  --backgroundColor: #262626;
+  --headingColor: #ffffff;
+  --textColor: #dddddd;
+  --footerColor: #cccccc;
+  --cardColor: #333333;
+}
+
+/* General styling */
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--backgroundColor);
+}
+/* styling the form background container */
+.form-bg-container {
+  background-color: var(--cardColor);
+  background-image: url("../image/form/form3.jpg");
+}
+/* Styling the container */
+.form-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  padding: 25px;
+  color: var(--headingColor);
+}
+/* styling the form description */
+.form-description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  color: var(--textColor);
+}
+/* Styling the fieldset */
+fieldset {
+  border: 2px solid var(--textColor);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+/* Container for the form elements */
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+}
+/* Styling the gender heading */
+.gender-field-heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Labels for form inputs */
+.form-label {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--footerColor);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Textarea for medical concern */
+input[type="text"]#medicalConcern {
+  height: 80px;
+  resize: none;
+}
+
+/* Submit button */
+.submitButton {
+  margin-top: 30px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+/*Styling the submit button when hover over it*/
+.submitButton:hover {
+  background-image: linear-gradient(to bottom, #3498db, #182d3b);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Styling for dropdown (select) */
+.dept-dropdown {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Home button */
+.HomeBtn {
+  text-decoration: none;
+  margin-top: 30px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+/*Styling the submit button when hover over it*/
+.HomeBtn:hover {
+  background-image: linear-gradient(to bottom, #3498db, #182d3b);
+  font-size: 1.2rem;
+  cursor: pointer;
+}

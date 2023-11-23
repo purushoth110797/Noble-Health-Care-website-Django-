@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* Reseting the default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root {
+  --backgroundColor: #f5f5f5;
+  --headingColor: #000000;
+  --textColor: #333333;
+  --footerColor: #cccccc;
+}
+
+/* Overall and  general styling */
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--backgroundColor);
+}
+
+/* styling the horizontal rule */
+hr {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Aligning the nav links to the left hand side */
+#navbar-nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the Nav bar items */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ) {
+  color: var(--textColor);
+  font-family: "Roboto", sans-serif;
+}
+/* Styling the Nav bar items when hover over it */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6,
+    #nav-item7
+  ):hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+/* Styling the dropdown box */
+.dropdown-menu {
+  background: linear-gradient(to bottom, #eaeaea, #ffffff);
+  border: 1px solid rgb(173, 170, 170);
+}
+/* Styling the Drop down item */
+.dropdown-item {
+  font-weight: 400;
+  color: var(--textColor);
+}
+/* Styling the Drop down item when hover */
+.dropdown-item:hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+
+/* Styling the vision section */
+/* styling the introduction section */
+#vision {
+  background: linear-gradient(to bottom, #333333, #999999);
+  margin-top: 130px;
+  padding-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional styling for text content */
+#vision .container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background for better text readability */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Optional: Add a subtle shadow for depth */
+}
+/* styling the heading and paragraph */
+#vision p {
+  background: linear-gradient(45deg, #d0b200, #3b3301);
+  -webkit-background-clip: text; /* WebKit/Blink browsers */
+  color: transparent;
+  font-size: 1.5rem;
+}
+#vision h1 {
+  color: black;
+  font-size: 2.5rem;
+}
+
+/* Styling the vision section */
+/* styling the introduction section */
+#mission {
+  background: linear-gradient(to bottom, #333333, #999999);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional styling for text content */
+#mission .container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background for better text readability */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Optional: Add a subtle shadow for depth */
+}
+/* styling the heading and paragraph */
+#mission p {
+  background: linear-gradient(45deg, #d0b200, #3b3301);
+  -webkit-background-clip: text; /* WebKit/Blink browsers */
+  color: transparent;
+  font-size: 1.5rem;
+}
+#mission h1 {
+  color: black;
+  font-size: 2.5rem;
+}
+
+/* Styling the Footer section */
+/* Styling the footer section */
+/* styling the footer section background */
+.footer-section {
+  background-color: var(--footerColor);
+}
+/* styling the footer section logo */
+.footer-section-logo {
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--textColor);
+  transition: transform 0.2s ease;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id:is(:hover, :focus) {
+  color: rgb(8, 8, 8);
+  font-weight: 600;
+}
+/* stylint the footer section address */
+.footer-section-address {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+/* Styling the copyright content */
+.copyRightsCont {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+.nowrap {
+  white-space: nowrap;
+}

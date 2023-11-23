@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap");
+
+/* Reseting the default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root element for storing the variables */
+:root {
+  --backgroundColor: #f5f5f5;
+  --headingColor: #000000;
+  --textColor: #333333;
+  --footerColor: #cccccc;
+}
+
+/* Overall and  general styling */
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--backgroundColor);
+}
+/* styling the horizontal rule */
+main hr {
+  margin: 0px;
+  padding: 0px;
+  border: 3px solid black;
+}
+
+/* Aligning the nav links to the left hand side */
+#navbar-nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the Nav bar items */
+:is(#nav-item1, #nav-item2, #nav-item3, #nav-item4, #nav-item5, #nav-item6) {
+  color: var(--textColor);
+  font-family: "Roboto", sans-serif;
+}
+/* Styling the Nav bar items when hover over it */
+:is(
+    #nav-item1,
+    #nav-item2,
+    #nav-item3,
+    #nav-item4,
+    #nav-item5,
+    #nav-item6
+  ):hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+/* Styling the dropdown box */
+.dropdown-menu {
+  background: linear-gradient(to bottom, #eaeaea, #ffffff);
+  border: 1px solid rgb(173, 170, 170);
+}
+/* Styling the Drop down item */
+.dropdown-item {
+  font-weight: 400;
+  color: var(--textColor);
+}
+/* Styling the Drop down item when hover */
+.dropdown-item:hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+
+/* Styling the main section */
+/* Styling the background banner image */
+.banner-section-image-container {
+  margin-top: 125px;
+  background-image: url("../image/banner_section.jpg");
+  height: 100vh;
+  background-size: cover;
+  align-content: center;
+  position: relative;
+}
+
+.banner-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* styling the banner section heading */
+.banner-heading {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+/* Styling the banner description */
+.banner-description {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+/* Styling the button */
+.book-appointment-btn {
+  width: 200px;
+  height: 45px;
+  color: white;
+  background-image: linear-gradient(#d0b200, #a58d00);
+  border-width: 0;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+}
+/* styling the button when hover over it */
+.book-appointment-btn:is(:hover, :focus) {
+  color: white;
+  background-image: linear-gradient(#d0b200, #3b3301);
+  border: 1px solid #d0b200;
+}
+
+/* increase the responsiveness of the banner section in medium and below sizes */
+@media screen and (max-width: 990px) {
+  .banner-section-image-container {
+    margin-top: 125px;
+  }
+  /* styling the banner section heading */
+  .banner-heading {
+    font-size: 2.2rem;
+  }
+  /* Styling the banner description */
+  .banner-description {
+    font-size: 1rem;
+  }
+}
+
+/* Styling the home card container */
+.card-containers {
+  background-image: linear-gradient(to right, #4caf50, #ffc107);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px; /* Adjust the padding to center vertically */
+}
+
+/* Styling the container-fluid */
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling the row */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Adjust the gap between cards */
+}
+
+/* styling the home card */
+.home-card {
+  width: 180px;
+  background-color: #eaeaea;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 15px; /* Adjust the padding within each card */
+}
+/* styling the home coard when hover over it */
+.home-card:hover {
+  transform: scale(1.15);
+}
+/* Styling the home-card icons */
+.home-card-icon {
+  width: 100px;
+}
+
+/* Styling the home card title */
+.home-card-title {
+  text-decoration: none;
+  color: var(--headingColor);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Styling the home card title when hover over it */
+.home-card-title:hover {
+  text-decoration: underline;
+  text-shadow: 3px 3px 5px gray;
+}
+
+/* WHY Choose us section */
+/* styling the background */
+.why-choose-us-section {
+  background-image: linear-gradient(to right, #4caf50, #ffc107);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/* styling the heading */
+.why-choose-us-section-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+  color: var(--headingColor);
+}
+/* styling the sub heading */
+.why-choose-us-section-sub-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.4em;
+  color: var(--headingColor);
+}
+/* styling the description */
+.why-choose-us-section-description {
+  font-size: 1rem;
+  padding-bottom: 0.4em;
+  color: var(--textColor);
+  text-wrap: balance;
+}
+/* styling the small device image */
+.small-wcu-image {
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 410px) {
+  .small-wcu-image {
+    width: 300px;
+    border-radius: 10px;
+  }
+}
+
+/* Media query for medium-sized screens and above */
+@media (min-width: 766px) {
+  #medium-wcu-image {
+    width: 300px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1023px) {
+  #medium-wcu-image {
+    width: 400px;
+    border-radius: 10px;
+  }
+}
+
+/* About us section */
+/* styling the background */
+.about-section {
+  background-image: radial-gradient(#fff8db, #fae59a);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/* styling the heading */
+.about-us-section-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+  color: var(--headingColor);
+}
+/* styling the sub heading */
+.about-us-section-sub-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 0.4em;
+  color: var(--headingColor);
+}
+/* styling the description */
+.about-us-section-description {
+  font-size: 1rem;
+  padding-bottom: 0.4em;
+  color: var(--textColor);
+  text-wrap: balance;
+}
+
+/* styling the slider */
+.slider-container,
+.small-slider {
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Optional: Add media queries for responsiveness */
+@media screen and (max-width: 1023px) {
+  .slider img {
+    width: 100%;
+  }
+}
+
+/* styling the location sections */
+.location-main-container {
+  background: linear-gradient(to bottom, #fcf8f8, #3f3e3e);
+}
+/* styling the location container */
+.location-card-container {
+  background-image: radial-gradient(#fff8db, #fae59a);
+  border-radius: 1rem;
+  border: 1px solid black;
+  padding-left: 0.5em;
+  transition: transform 0.2s ease-in-out;
+}
+/* styling the location container when we hover over it */
+.location-card-container:is(:hover, :focus) {
+  transform: scale(1.03);
+}
+/* styling the heading */
+.location-main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 0.1em;
+  color: var(--headingColor);
+}
+/* styling the description */
+.location-main-description {
+  font-size: 1rem;
+  padding-bottom: 0.1em;
+  color: var(--textColor);
+  text-wrap: balance;
+}
+/* styling the location icon */
+.location-icon {
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+/* styling the main location page link */
+.location-link-text {
+  display: inline-block;
+  padding-left: 0.4em;
+  font-size: 1.3rem;
+  color: var(--textColor);
+  transition: transform 0.25s ease;
+}
+/* styling the link when hover over it */
+.location-link-text:is(:hover, :focus) {
+  text-decoration: underline;
+  color: dodgerblue;
+  transform: scale(1.04);
+}
+/* styling the image card */
+.text-bg-dark {
+  transition: transform 0.2s ease-in-out;
+}
+/* styling when we hover over it */
+.text-bg-dark:is(:hover, :focus) {
+  transform: scale(1.03);
+}
+/* styling the heading of the image card */
+#image-card-title {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.25s ease;
+}
+/* styling the heading when we hover over it */
+#image-card-title:is(:hover, :focus) {
+  text-decoration: underline;
+  color: dodgerblue;
+  transform: scale(1.04);
+}
+/* styling the location description */
+#image-card-title {
+  color: white;
+  text-wrap: balance;
+}
+
+/* Updated styles for better text control and consistent container size */
+@media screen and (min-width: 992px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .location-card-container,
+  .image-card-container {
+    width: calc(33.3333% - 10px); /* Adjust margin as needed */
+    flex: 0 0 auto;
+    margin-bottom: 3px; /* Adjust margin as needed */
+  }
+
+  .location-card-container {
+    padding-left: 15px;
+    margin-top: 2px;
+  }
+
+  .card-text.location-description {
+    max-height: 100px; /* Adjust the maximum height for text as needed */
+    overflow: hidden;
+  }
+}
+
+/* Updated styles for better text control and consistent container size */
+@media screen and (max-width: 380px) {
+  .location-card-container {
+    padding-left: 5px;
+    font-size: 0.7rem;
+  }
+
+  .card-text.location-description {
+    font-size: 0.8rem;
+    /* Adjust the maximum height for text as needed */
+    overflow: hidden;
+  }
+}
+
+/* Styling the Footer section */
+/* Styling the footer section */
+/* styling the footer section background */
+.footer-section {
+  background-color: var(--footerColor);
+}
+/* styling the footer section logo */
+.footer-section-logo {
+  margin-top: 20px;
+  width: 250px;
+  height: auto;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--textColor);
+  transition: transform 0.2s ease;
+}
+/* styling the footer section mail id */
+.footer-section-mail-id:is(:hover, :focus) {
+  color: rgb(8, 8, 8);
+  font-weight: 600;
+}
+/* stylint the footer section address */
+.footer-section-address {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+/* Styling the copyright content */
+.copyRightsCont {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+.nowrap {
+  white-space: nowrap;
+}
