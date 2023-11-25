@@ -86,7 +86,7 @@ hr {
 /* styling the hero section text */
 .hero-text {
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -103,7 +103,7 @@ hr {
   color: white;
 }
 .hero-text {
-  animation: fadeInUp 2s ease-in-out;
+  animation: fadeInUp 3s ease-in-out;
 }
 
 @keyframes fadeInUp {
@@ -121,6 +121,8 @@ hr {
   .hero-text h1 {
     font-size: 1.8rem;
     margin-bottom: 5px;
+    top: 30%;
+    left: 50%;
   }
 
   .hero-text p {

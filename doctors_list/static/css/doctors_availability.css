@@ -140,9 +140,9 @@ td {
   .tblContainer table {
     width: 100%;
   }
-  .tblContainer th:nth-child(2),
-  .tblContainer td:nth-child(2) {
-    display: none;
+  .tblContainer th:nth-child(1),
+  .tblContainer td:nth-child(1) {
+    width: 50px;
   }
   /* Style for table header (th) cells */
   th {
